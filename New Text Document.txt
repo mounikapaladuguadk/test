@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt update && apt install -y nginx nano && mkdir /mounika/ && adduser mounika
+MAINTAINER mounika
+WORKDIR ./app1
+COPY ./* /app1/
+CMD ["nginx", "-g", "daemon off;"]
